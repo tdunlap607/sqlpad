@@ -368,7 +368,7 @@ _accidentally tagged without changes_
 ## [5.8.1] - 2020-10-23
 
 - Fix LDAP editor role search filter
-- Allow empty/`denied` value for `SQLPAD_LDAP_DEFAULT_ROLE` to deny users that do not match LDAP role filters. See [LDAP documentation](http://sqlpad.pages.dev/#/authentication?id=ldap-experimental) for more info.
+- Allow empty/`denied` value for `SQLPAD_LDAP_DEFAULT_ROLE` to deny users that do not match LDAP role filters. See [LDAP documentation](http://sqlpad.github.io/#/authentication?id=ldap-experimental) for more info.
 
 ## [5.8.0] - 2020-10-22
 
@@ -399,13 +399,13 @@ _accidentally tagged without changes_
 
 ## [5.4.0] - 2020-08-03
 
-- Add configurable query result store (memory, database, and redis now an option). See `SQLPAD_QUERY_RESULT_STORE` under [configuration](https://sqlpad.pages.dev/#/configuration) docs.
+- Add configurable query result store (memory, database, and redis now an option). See `SQLPAD_QUERY_RESULT_STORE` under [configuration](https://sqlpad.github.io/#/configuration) docs.
 - Update MySQL connections to use INTERACTIVE flag to prevent early connection close.
 
 ## [5.3.0] - 2020-07-31
 
 - Embolden result column headers
-- Add configurable session store (memory, database, and redis now an option). See `SQLPAD_SESSION_STORE` under [configuration](https://sqlpad.pages.dev/#/configuration) docs.
+- Add configurable session store (memory, database, and redis now an option). See `SQLPAD_SESSION_STORE` under [configuration](https://sqlpad.github.io/#/configuration) docs.
 - Update server dependencies
 
 ## [5.2.1] - 2020-07-27
@@ -419,7 +419,7 @@ This release introduces new generic webhooks for a variety of events, while depr
 
 The webhooks added support a larger number of events than previously handled, such as queries being run and results/error received from those queries.
 
-- Add webhooks [documentation](http://sqlpad.pages.dev/#/webhooks)
+- Add webhooks [documentation](http://sqlpad.github.io/#/webhooks)
 - Deprecate SMTP email and Slack webhook, both to be removed in v6.
 - Capture database error message on ODBC driver connection error
 - Show service token UI only if enabled via config (#787)
@@ -493,7 +493,7 @@ Special thanks to @eladeyal-intel, @bruth, @yorek, @dengc367, @murphyke, and @Wi
 
 - Test connection error shown
 
-- New `/batches` API for running multi-statement SQL. This replaces `/query-result` API, and is written in a more RESTful approach, removing the need to extend SQLPad timeouts. See [API docs](http://sqlpad.pages.dev/#/api-batches) for more info.
+- New `/batches` API for running multi-statement SQL. This replaces `/query-result` API, and is written in a more RESTful approach, removing the need to extend SQLPad timeouts. See [API docs](http://sqlpad.github.io/#/api-batches) for more info.
 
 - Adds `allowedDomains` config item and deprecates `whitelistedDomains` to be removed in v6.
 
@@ -503,7 +503,7 @@ Special thanks to @eladeyal-intel, @bruth, @yorek, @dengc367, @murphyke, and @Wi
 
 - `denyMultipleStatements` connection option removed. Multiple statements are now attempted to be supported at SQLPad REST API level via `batches` and `statements` API.
 
-- `/download-results/` API has been removed in favor of `/statement-results/`, which is similar but based on `statementId` instead of `cacheKey`. See [API docs](http://sqlpad.pages.dev/#/api-batches) for more info.
+- `/download-results/` API has been removed in favor of `/statement-results/`, which is similar but based on `statementId` instead of `cacheKey`. See [API docs](http://sqlpad.github.io/#/api-batches) for more info.
 
 - `debug` config option removed. Use `appLogLevel` set to `debug` instead.
 
@@ -548,33 +548,33 @@ Special thanks to @eladeyal-intel, @bruth, @yorek, @dengc367, @murphyke, and @Wi
 
 ### Features
 
-- Add Google BigQuery support [documentation](https://sqlpad.pages.dev/#/connections?id=bigquery)
+- Add Google BigQuery support [documentation](https://sqlpad.github.io/#/connections?id=bigquery)
 
-- Add SQLite support [documentation](https://sqlpad.pages.dev/#/connections?id=sqlite)
+- Add SQLite support [documentation](https://sqlpad.github.io/#/connections?id=sqlite)
 
 - Adds batch query support to ODBC (last statement is shown in UI)
 
-- Auth: Add option to disable authentication. [documentation](https://sqlpad.pages.dev/#/authentication?id=no-authentication)
+- Auth: Add option to disable authentication. [documentation](https://sqlpad.github.io/#/authentication?id=no-authentication)
 
   When auth is disabled, application no longer requires authentication.
 
-- Auth: Add proxy authentication support. [documentation](https://sqlpad.pages.dev/#/authentication?id=auth-proxy)
+- Auth: Add proxy authentication support. [documentation](https://sqlpad.github.io/#/authentication?id=auth-proxy)
 
 - Add private/shared query model.
 
   Going forward queries are _private_ by default. When sharing is enabled, query is shared with all users (and they are given write permissions). Finer-grained access to be added in the future (share with specific user, read vs write)
 
-- Add connection and query seed data support [documentation](https://sqlpad.pages.dev/#/seed-data)
+- Add connection and query seed data support [documentation](https://sqlpad.github.io/#/seed-data)
 
 - Add service tokens (api tokens). New menu option is available when logged in as admin.
 
 - Add application header for application-level administration
 
-- Adds multi-statement transaction support for Postgres, SQLite, and ODBC. [documentation](https://sqlpad.pages.dev/#/connections?id=multi-statement-transaction-support)
+- Adds multi-statement transaction support for Postgres, SQLite, and ODBC. [documentation](https://sqlpad.github.io/#/connections?id=multi-statement-transaction-support)
 
 - Add config deprecation for following keys: `debug`, `tableChartLinksRequireAuth`, `keyPath`, `certPath`, `certPassphrase`
 
-- Add connection template support [documentation](https://sqlpad.pages.dev/#/connection-templates)
+- Add connection template support [documentation](https://sqlpad.github.io/#/connection-templates)
 
 - Adds additional query run logging for queries executed and details surrounding them (logged under `info` level)
 

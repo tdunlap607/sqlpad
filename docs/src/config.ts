@@ -7,7 +7,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: 'https://sqlpad.pages.dev/images/screenshot.png',
+    src: 'https://sqlpad.github.io/images/screenshot.png',
     alt: 'A screenshot of SQLPad',
   },
   twitter: 'rickbergfalk',
